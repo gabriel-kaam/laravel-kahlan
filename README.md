@@ -12,7 +12,7 @@ Take a look at [the example spec](https://github.com/jarektkaczyk/kahlan-driven-
 
 1. Add to your project
     ```
-    composer require --dev sofa/laravel-kahlan:"~5.4"
+    composer require --dev sofa/laravel-kahlan:"~5.6"
     ```
 
 2. Add this line to your kahlan config file (create it if necessary):
@@ -23,7 +23,7 @@ Take a look at [the example spec](https://github.com/jarektkaczyk/kahlan-driven-
     Sofa\LaravelKahlan\Env::bootstrap($this);
 
     ```
-     
+
 3. Create your first spec in `/spec` folder, for example `/spec/AppSpec.php` and run test suite with `vendor/bin/kahlan`. Working example can be found on https://github.com/jarektkaczyk/kahlan-driven-laravel
     ```php
     /*  /path/to/your/app/spec/AppSpec.php  */
@@ -57,7 +57,7 @@ Take a look at [the example spec](https://github.com/jarektkaczyk/kahlan-driven-
     - Laravel **TestCase features**, eg. `$this->laravel->get('/')->assertResponseOk()`
     - **Application instance** as either of: `$this->app === $this->laravel->app === app()`
 
-* For tests that *don't require* Laravel there's `--no-laravel` cli option, since booting up the application for each test has huge impact on performance: 
+* For tests that *don't require* Laravel there's `--no-laravel` cli option, since booting up the application for each test has huge impact on performance:
     ```
     /path/to/app$ vendor/bin/kahlan --spec=spec/unit --no-laravel
     ```
